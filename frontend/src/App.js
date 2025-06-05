@@ -12,7 +12,7 @@ function App() {
     setLoading(true);
     setResults(null);
     try {
-      const res = await axios.post('http://localhost:5000/analyze', {
+      const res = await axios.post('https://seo-analyzer-backend-ocn4.onrender.com/analyze', {
         text: text
       });
       setResults(res.data);
