@@ -12,9 +12,10 @@ function App() {
     setLoading(true);
     setResults(null);
     try {
-      const res = await axios.post('https://seo-analyzer-backend-ocn4.onrender.com/analyze', {
-        text: text
-      });
+      cconst res = await axios.post('https://seo-analyzer-backend-ocn4.onrender.com/analyze', {
+  text: inputText
+});
+
       setResults(res.data);
     } catch (error) {
       console.error("Error analyzing text:", error);
