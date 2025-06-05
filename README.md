@@ -1,6 +1,6 @@
 # 🧠 SEO Analyzer Web App
 
-This is a simple and effective SEO Analyzer built with the MERN stack. It allows users to input a block of text and receive keyword and topic analysis using the TextRazor NLP API.
+This is a simple and effective SEO Analyzer built with the Express.js , Node.js and React.js . It allows users to input a block of text and receive keyword and topic analysis using the TextRazor NLP API.
 
 ## ✨ Features
 
