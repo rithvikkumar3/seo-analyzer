@@ -18,7 +18,7 @@ This is a simple and effective SEO Analyzer built with the Express.js , Node.js 
 
 ## 🔗 Live Demo
 
-- 🌐 **Frontend**: [SEO Analyzer Frontend](https://seo-analyzer-frontend.onrender.com)  
+- 🌐 **Frontend**: [SEO Analyzer Frontend](https://seo-analyzer-pearl.vercel.app/)  
 - 🚀 **Backend**: [SEO Analyzer Backend API](https://seo-analyzer-backend-ocn4.onrender.com)
 
 ---  
