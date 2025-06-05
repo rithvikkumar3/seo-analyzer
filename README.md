@@ -16,6 +16,13 @@ This is a simple and effective SEO Analyzer built with the Express.js , Node.js 
 - **Backend**: Node.js, Express.js
 - **External API**: [TextRazor NLP API](https://www.textrazor.com/)
 
+## 🔗 Live Demo
+
+- 🌐 **Frontend**: [SEO Analyzer Frontend](https://seo-analyzer-frontend.onrender.com)  
+- 🚀 **Backend**: [SEO Analyzer Backend API](https://seo-analyzer-backend-ocn4.onrender.com)
+
+---  
+
 ## 🚀 Getting Started
 
 ### 1. Clone the repo
