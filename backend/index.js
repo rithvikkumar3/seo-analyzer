@@ -86,12 +86,12 @@ app.post('/insert-keyword', (req, res) => {
 const periodIndex = text.lastIndexOf(".");
 if (periodIndex !== -1) {
   modifiedText =
-    text.slice(0, periodIndex).trim() +
-    ` ${keyword}.` +  // Add period after keyword
-    text.slice(periodIndex + 1);
+    text.slice(0, periodIndex).trim() +  // before period
+    ` ${keyword}.`;                      // keyword + period
 } else {
   modifiedText = text.trim() + ` ${keyword}`;
 }
+
 
   res.json({ modifiedText });
 });
