@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import AnalyzerForm from './components/AnalyzerForm';
@@ -15,7 +14,6 @@ function App() {
       const res = await axios.post('https://seo-analyzer-backend-ocn4.onrender.com/analyze', {
         text: inputText
       });
-
       console.log("API Response:", res.data);  // helpful log for debugging
       setResults(res.data);
     } catch (error) {
@@ -26,8 +24,20 @@ function App() {
   };
 
   const handleInsertKeyword = (keyword) => {
-    const newText = inputText + ' ' + keyword;
-    setInputText(newText);
+    let modifiedText;
+    const periodIndex = inputText.lastIndexOf(".");
+    
+    if (periodIndex !== -1) {
+      // Insert keyword before the last period
+      modifiedText =
+        inputText.slice(0, periodIndex).trim() +  // text before the period
+        ` ${keyword}.`;                           // space + keyword + period
+    } else {
+      // No period found, just append the keyword
+      modifiedText = inputText.trim() + ` ${keyword}`;
+    }
+    
+    setInputText(modifiedText);
   };
 
   return (
