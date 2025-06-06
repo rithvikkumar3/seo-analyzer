@@ -82,12 +82,11 @@ app.post('/insert-keyword', (req, res) => {
 
   // Naively insert keyword before last period
  let modifiedText;
-
 const periodIndex = text.lastIndexOf(".");
 if (periodIndex !== -1) {
   modifiedText =
-    text.slice(0, periodIndex).trim() +  // before period
-    ` ${keyword}.`;                      // keyword + period
+    text.slice(0, periodIndex).trim() +  // text before the period
+    ` ${keyword}.`;                      // space + keyword + period
 } else {
   modifiedText = text.trim() + ` ${keyword}`;
 }
