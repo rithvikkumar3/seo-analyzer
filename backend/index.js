@@ -81,18 +81,17 @@ app.post('/insert-keyword', (req, res) => {
   }
 
   // Naively insert keyword before last period
-  let modifiedText;
+ let modifiedText;
 
-  const periodIndex = text.lastIndexOf(".");
-  if (periodIndex !== -1) {
-    modifiedText =
-      text.slice(0, periodIndex).trim() +
-      ` ${keyword}` +
-      text.slice(periodIndex);
-  } else {
-    // No period, just append to end
-    modifiedText = text.trim() + ` ${keyword}`;
-  }
+const periodIndex = text.lastIndexOf(".");
+if (periodIndex !== -1) {
+  modifiedText =
+    text.slice(0, periodIndex).trim() +
+    ` ${keyword}.` +  // Add period after keyword
+    text.slice(periodIndex + 1);
+} else {
+  modifiedText = text.trim() + ` ${keyword}`;
+}
 
   res.json({ modifiedText });
 });
